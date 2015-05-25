@@ -16,8 +16,3 @@ class UserProfile(models.Model):
 
 	def __unicode__(self):
 		return self.user.username
-
-'''
- http://www.esotech.org/wp-content/uploads/2011/12/jquery_logo.png
-    http://www.linuxtrent.it/sites/default/files/images/drupal-logo.jpg
-'''
