@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from twitterclone.models import Tweet, Comment, UserProfile
+from twitterclone.models import Tweet, UserProfile
 
 class TweetForm(forms.ModelForm):
 	tweet_text = forms.CharField(max_length=200, 
