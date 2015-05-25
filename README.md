@@ -12,21 +12,23 @@ virtualenv
 Instalar Requerimientos
 -------------------------------
 1) Clonar la carpeta del repositorio 
+
 2) A la carpeta clonada, ejecutar en la terminal
 	$ virtualenv TwitterClone
-3) Instalar los requerimientos de la carpeta requeriments.txt
+
+3) Aplicar el comando para activar la carpeta virtual
+	$ source bin/activate
+
+4) Instalar los requerimientos de la carpeta requeriments.txt
    	$ pip install -r requeriments.txt
-   De tener conflictos, instalarlos por separado:
+   Es equivalente a hacer lo siguiente:
 	$ pip install Django==1.7
 	$ pip install pillow
 
-5) Aplicar el comando para activar la carpeta virtual
-	$ source bin/activate
-
-4) Se esta usando por defecto SLQlite que viene incorporado a Django, Dentro de la Carpeta TwitterClone aplicar el siguiente comando:
+5) Se esta usando por defecto SLQlite que viene incorporado a Django, Dentro de la Carpeta TwitterClone aplicar el siguiente comando:
 	$ python manage.py migrate
 
-5) Ya se tiene todo listo para correr la aplicacion.
+6) Ya se tiene todo listo para correr la aplicacion.
 
 
 Correr la Aplicacion
