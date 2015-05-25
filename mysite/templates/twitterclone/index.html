@@ -1,0 +1,39 @@
+{% extends 'twitterclone/base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}{{ category_name }}{% endblock %}
+
+{% block body_block %}
+
+
+        {% if user.is_authenticated %}
+
+                {% if tweets %}
+                        {% for tweet in tweets %}
+                            <article>
+                                <ul id="content-url">
+                                    <a>{{ tweet.tweet_text }}
+                                        <div id="urls"> </div>
+                                        <div id="photos"> </div>
+                                    </a>
+                                </ul>
+                                <footer>
+                                    Posted in {{ tweet.pub_date }}
+                                </footer>
+                            </article>
+                        {% endfor %}
+                {% else %}
+                    <strong>There are no tweets present.</strong>
+                {% endif %}
+            
+
+        {% else %}
+             <h1>Twitter says... hello!!</h1>
+            
+        {% endif %}
+
+        <script src="{% static 'js/jquery-2.0.3.min.js' %}"></script>
+        <script src="{% static 'js/rango-ajax.js' %}"></script>
+
+{% endblock %}
