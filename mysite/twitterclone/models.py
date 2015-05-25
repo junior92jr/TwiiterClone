@@ -11,15 +11,6 @@ class Tweet(models.Model):
 	def __str__(self):
 		return self.tweet_text
 
-
-class Comment(models.Model):
-	tweet = models.ForeignKey(Tweet)
-	comment_text = models.CharField(max_length=200)
-	likes = models.IntegerField(default=0)
-
-	def __str__(self):
-		return self.comment_text
-
 class UserProfile(models.Model):
 	user = models.OneToOneField(User)
 

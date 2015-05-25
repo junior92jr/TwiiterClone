@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.template import RequestContext
 from django.http import HttpResponse
-from twitterclone.models import Tweet, Comment
+from twitterclone.models import Tweet
 from twitterclone.forms import TweetForm, UserForm, UserProfileForm
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect, HttpResponse
